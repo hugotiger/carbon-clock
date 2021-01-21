@@ -1,21 +1,10 @@
 import { animate } from "framer-motion";
-import React, { useEffect, useRef, useState } from "react";
-
-function usePrevious(value: any) {
-  // Use ref to store value
-  const ref = useRef();
-
-  // Update ref when value changes
-  useEffect(() => {
-    ref.current = value;
-  }, [value]);
-
-  return ref.current;
-}
+import React, { useEffect, useState } from "react";
+import { usePrevious } from "../hooks";
 
 interface CounterProps {
   value: number;
-  formatValue?: (val: number) => String;
+  formatValue?: (val: number) => string;
   duration?: number;
   renderInterval?: number;
   as?: keyof JSX.IntrinsicElements;
@@ -30,7 +19,7 @@ interface HTMLAttributes
 
 type Props = CounterProps & HTMLAttributes;
 
-export const Counter: React.FC<Props> = (props) => {
+const Counter: React.FC<Props> = (props) => {
   const {
     value = 0,
     formatValue = (val: number) => val.toString(),
