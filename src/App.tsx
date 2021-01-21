@@ -1,14 +1,20 @@
-import React from "react";
-import "./App.css";
+import * as React from "react";
+import { Header, Container } from "./components";
+import AboutSection from "./components/AboutSection";
+import GlobalStyle from "./GlobalStyle";
 import Clock from "./views/Clock";
+
+// TODO: Find the logo I made
 
 function App() {
   return (
     <>
-      {/* TODO: Add header */}
+      <GlobalStyle />
+      <Header />
       <Clock />
-      {/* TODO: Add description */}
-      <h1>Hello</h1>
+      <Container as="section" id="faq">
+        <AboutSection />
+      </Container>
     </>
   );
 }
