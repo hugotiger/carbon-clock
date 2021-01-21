@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import moment from "moment";
+// @ts-ignore
 import countdown from "countdown";
 
 const updateInterval = 500; // How often to update the stats (ms)
@@ -12,11 +13,12 @@ const annualGrowthRate = 1.0; //TODO: Prova ändra till 1.0
 const calcRemaining = () => {
   const remainingBudget = getRemainingBudget();
   const remainingTime = getRemainingTime();
+
   return { remainingBudget, remainingTime };
 };
 
-const secondsPassed = () => {
-  const secondsPassed = moment().diff(startDate);
+const secondsPassed = (date: moment.MomentInput) => {
+  const secondsPassed = moment().diff(date);
   return secondsPassed;
 };
 
@@ -28,8 +30,15 @@ const getRemainingBudget = () => {
 
 const getRemainingTime = () => {
   const yearsBudget = totalBudget / initialAnnualEmissions;
-  const endDate = moment(startDate + yearsBudget * millisecondsPerYear);
-  const cdown = countdown(endDate);
+  const endDate = moment(startDate).add(yearsBudget * millisecondsPerYear);
+  const cdown: {
+    years: number;
+    months: number;
+    days: number;
+    hours: number;
+    minutes: number;
+    seconds: number;
+  } = countdown(endDate);
 
   // Destructure cdown into object containing times
   const times = (({ years, months, days, hours, minutes, seconds }) => ({
