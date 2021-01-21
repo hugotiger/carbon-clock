@@ -23,7 +23,7 @@
 
 .carbon {
   font-size: 4em;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
   font-weight: 700;
   position: relative;
   z-index: 100;
@@ -43,16 +43,6 @@
   text-transform: uppercase;
 }
 
-@media only screen and (max-width: 1000px) {
-  .label {
-    font-size: 1rem;
-  }
-  .carbon {
-    font-size: 2em;
-    letter-spacing: 2px;
-  }
-}
-
 .time-label {
   font-size: 1rem;
   font-weight: normal;
@@ -60,17 +50,46 @@
   margin-top: 0.5rem;
   text-transform: uppercase;
 }
+/* @media only screen and (max-width: 1000px) {
+  .label {
+    font-size: 1rem;
+  }
+  .carbon {
+    font-size: 2em;
+    letter-spacing: 2px;
+  }
+
+  .time-label {
+    font-size: 0.75rem;
+  }
+} */
 
 .time__value {
-  text-align: center;
+  /* Nudge it a tiny amount to visually center it */
+  transform: translateX(2px);
+}
+
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(6, auto);
+  gap: 2rem 3rem;
   place-items: center;
 }
 
-.grid > span {
-  padding: 0 24px;
+@media only screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+@media only screen and (max-width: 360px) {
+  .time__value {
+    font-size: 2rem;
+  }
 }

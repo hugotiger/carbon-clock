@@ -8,7 +8,7 @@ const millisecondsPerYear = 3600 * 24 * 365.25 * 1000;
 const startDate = moment("2018-01-01");
 const initialAnnualEmissions = 42.0 * 1e9;
 const totalBudget = 420 * 1e9;
-const annualGrowthRate = 1.0; //TODO: Prova ändra till 1.0
+// const annualGrowthRate = 1.0;
 
 const calcRemaining = () => {
   const remainingBudget = getRemainingBudget();
@@ -28,17 +28,19 @@ const getRemainingBudget = () => {
   return totalBudget - budgetUsed;
 };
 
+export interface CoundownAttrs {
+  years: number;
+  months: number;
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
 const getRemainingTime = () => {
   const yearsBudget = totalBudget / initialAnnualEmissions;
   const endDate = moment(startDate).add(yearsBudget * millisecondsPerYear);
-  const cdown: {
-    years: number;
-    months: number;
-    days: number;
-    hours: number;
-    minutes: number;
-    seconds: number;
-  } = countdown(endDate);
+  const cdown: CoundownAttrs = countdown(endDate);
 
   // Destructure cdown into object containing times
   const times = (({ years, months, days, hours, minutes, seconds }) => ({
@@ -53,12 +55,12 @@ const getRemainingTime = () => {
   // Create remainingTime object with toString-method implemented
   const remainingTime = {
     ...times,
-    toString: () => {
-      // Iterate over object and map their keys + values to human-readable string
-      return Object.entries(times)
-        .map(([key, value]) => [value + " " + key])
-        .join(" ");
-    },
+    // toString: () => {
+    //   // Iterate over object and map their keys + values to human-readable string
+    //   return Object.entries(times)
+    //     .map(([key, value]) => [value + " " + key])
+    //     .join(" ");
+    // },
   };
 
   return remainingTime;

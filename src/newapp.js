@@ -1,5 +1,6 @@
 import React from "react";
 
+// TODO: Kika lite på denna innan du skickar in
 // En share link nånstans?
 export default function NewApp() {
   return (

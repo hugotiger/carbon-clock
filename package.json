@@ -10,7 +10,7 @@
     "@types/node": "^14.14.22",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
-    "animated-number-react": "^0.1.1",
+    "@types/styled-components": "^5.1.7",
     "countdown": "^2.6.0",
     "framer-motion": "^2.6.5",
     "moment": "^2.27.0",

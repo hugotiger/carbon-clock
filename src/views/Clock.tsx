@@ -13,17 +13,17 @@ export default function Clock() {
     <Main as="main">
       <AnimatePresence exitBeforeEnter>
         {active === "time" ? (
-          <TimeRemaining value={remainingTime} />
+          <TimeRemaining value={remainingTime} key="time" />
         ) : (
-          <BudgetRemaining value={remainingBudget} />
+          <BudgetRemaining value={remainingBudget} key="budget" />
         )}
       </AnimatePresence>
       <div style={{ position: "fixed", bottom: 150, zIndex: 100 }}>
         <Tab isActive={active === "carbon"} onClick={() => setActive("carbon")}>
-          CO<sub>2</sub> remaining
+          CO<sub>2</sub> budget left
         </Tab>
         <Tab isActive={active === "time"} onClick={() => setActive("time")}>
-          Time remaining
+          Remaining time
         </Tab>
       </div>
     </Main>

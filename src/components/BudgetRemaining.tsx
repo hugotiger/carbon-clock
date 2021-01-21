@@ -1,7 +1,6 @@
 import * as React from "react";
 import { motion } from "framer-motion";
-// @ts-ignore
-import AnimatedNumber from "animated-number-react"; //TODO: Byt till https://heyman333.github.io/animated-numbers/
+import Counter from "./Counter";
 
 const formatValue = (value: number): String =>
   Math.trunc(value)
@@ -12,7 +11,9 @@ interface Props {
   value: number;
 }
 
-export const BudgetRemaining: React.FC<Props> = ({ value }) => {
+export const BudgetRemaining: React.FC<Props> = (props) => {
+  const { value } = props;
+
   return (
     <motion.div
       key="remaining-budget"
@@ -22,22 +23,18 @@ export const BudgetRemaining: React.FC<Props> = ({ value }) => {
         scale: 1,
         opacity: 1,
         transition: {
-          duration: 5,
+          duration: 2,
         },
       }}
-      exit={{ opacity: 0 }}
+      exit={{ opacity: 0, transition: { duration: 0 } }}
     >
       <span className="label">
         CO<sub>2</sub> budget left (tons)
       </span>
 
-      <div>
-        <AnimatedNumber
-          value={value.toString()}
-          formatValue={formatValue}
-          duration={500}
-        />
-      </div>
+      {/* <div> */}
+      <Counter value={value} formatValue={formatValue} />
+      {/* </div> */}
     </motion.div>
   );
 };
