@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import * as React from "react";
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 const StyledHeader = styled(motion.header)`

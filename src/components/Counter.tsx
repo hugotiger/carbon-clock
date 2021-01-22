@@ -1,5 +1,5 @@
-import { animate } from "framer-motion";
 import React, { useEffect, useState } from "react";
+import { animate } from "framer-motion";
 import { usePrevious } from "../hooks";
 
 interface CounterProps {

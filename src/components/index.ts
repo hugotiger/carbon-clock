@@ -3,3 +3,4 @@ export { default as TimeRemaining } from "./TimeRemaining";
 export { default as TabButton } from "./TabButton";
 export { Main, Container } from "./Layout";
 export { default as Header } from "./Header";
+export { default as AboutSection } from "./AboutSection";

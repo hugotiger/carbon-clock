@@ -1,8 +1,7 @@
 import * as React from "react";
-import { Header, Container } from "./components";
-import AboutSection from "./components/AboutSection";
+import { Header, Container, AboutSection } from "./components";
+import { Clock } from "./views";
 import GlobalStyle from "./GlobalStyle";
-import Clock from "./views/Clock";
 
 // TODO: Find the logo I made
 
