@@ -4,6 +4,7 @@ import styled from "styled-components";
 export const Main = styled(motion.main)`
   width: 100vw;
   height: 100vh;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
