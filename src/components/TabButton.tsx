@@ -35,6 +35,7 @@ const Tab = styled.a<Props>`
     outline-width: 8px;
   }
   &:hover  {
+    border: 1px solid rgba(255, 255, 255, 0.5);
     background: ${(props) => !props.isActive && "rgba(220, 220, 255, 0.15)"};
   }
 `;
