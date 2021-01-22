@@ -36,7 +36,7 @@ export default function Clock() {
           isActive={active === "carbon"}
           onClick={() => setActive("carbon")}
         >
-          CO<sub>2</sub> budget left
+          CO<sub>2</sub> budget
         </TabButton>
         <TabButton
           role="button"
@@ -44,7 +44,7 @@ export default function Clock() {
           isActive={active === "time"}
           onClick={() => setActive("time")}
         >
-          Time remaining
+          Time left
         </TabButton>
       </TabsContainer>
     </Main>
