@@ -23,6 +23,18 @@ const GlobalStyle = createGlobalStyle`
         overflow-x: hidden;
     }
 
+    a {
+        color: inherit;
+        color: white;
+        text-decoration: inherit;
+        border-bottom: 1px dashed rgba(255,255,255,0.6);
+        transition: border-bottom 0.1s;
+
+        &:hover{
+            border-bottom: 1px dashed white;
+        }
+    }
+
     h2 {
         font-size: 2rem;
         margin-top: 0;

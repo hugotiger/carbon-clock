@@ -29,8 +29,11 @@ const StyledHeader = styled(motion.header)`
     /* Reset default anchor styles */
     color: inherit;
     text-decoration: inherit;
+    border-bottom: none;
 
     &:hover {
+      border-bottom: none;
+      text-decoration: none;
       color: white;
     }
   }

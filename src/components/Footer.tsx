@@ -10,9 +10,11 @@ const StyledFooter = styled.footer`
   a {
     color: inherit;
     text-decoration: inherit;
+    border-bottom: none;
 
     &:hover {
       text-decoration: underline;
+      border-bottom: none;
     }
   }
 `;
