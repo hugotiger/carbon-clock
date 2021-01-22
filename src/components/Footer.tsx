@@ -5,13 +5,7 @@ const StyledFooter = styled.footer`
   height: 120px;
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  span {
-    width: 140px;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
+  justify-content: space-between;
 
   a {
     color: inherit;
@@ -26,7 +20,7 @@ const StyledFooter = styled.footer`
 export const Footer: React.FC = () => {
   return (
     <StyledFooter>
-      <span>© {new Date().getFullYear()} Hugo Holm</span>|
+      <span>© {new Date().getFullYear()} Hugo Holm</span>
       <span>
         <a
           href="https://hugotiger.com"
