@@ -35,5 +35,4 @@ export const Container = styled.div`
   max-width: 640px;
   margin: 0 auto;
   padding: 0 1rem;
-  margin-bottom: 2rem; //TODO: Remove
 `;
