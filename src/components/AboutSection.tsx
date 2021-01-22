@@ -7,19 +7,32 @@ export default function AboutSection() {
     <section id="faq">
       <h2 id="about">About Carbon Clock</h2>
       <p>
-        Estimation of how... Lorem ipsum dolor sit amet consectetur adipisicing
-        elit. Optio debitis velit incidunt ab ad quis aut magnam corporis
-        aspernatur, possimus deserunt qui placeat quod. Laudantium possimus sunt
-        saepe animi totam.
+        Carbon Clock is an estimation of how much CO<sub>2</sub> can be released
+        into the atmosphere to limit global warming to a maximum of 1.5°C.
       </p>
       <h3 id="calculation">How is it calculated?</h3>
       <p>
-        Perspiciatis, molestias. Maiores tenetur, minima perferendis laboriosam
-        ab quisquam fugiat autem culpa molestias ratione voluptate! Alias,
-        sapiente esse quo illo delectus accusamus?
+        The values are calculated using interpolation of calculations from the{" "}
+        <a
+          href="https://www.ipcc.ch/sr15/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          IPCC
+        </a>
+        . The full calculation can be viewed{" "}
+        <a
+          href="https://github.com/hugotiger/carbon-clock/blob/master/src/calc.ts"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          here
+        </a>
+        . It's written in TypeScript, but shouldn't be too hard to understand
+        even with no prior programming knowlede.
         {/* TODO: Länk till min github för uträkning */}
       </p>
-      <h3>Is it trustworthy?</h3>
+      {/* <h3>Is it trustworthy?</h3>
       <h3>Who is behind the website?</h3>
       <h3>What can we do to reduce emissions?</h3>
       <p>
@@ -27,7 +40,7 @@ export default function AboutSection() {
         excepturi ad dolorum sunt. Ratione perspiciatis rerum rem sint ipsum,
         iusto provident, natus animi nostrum praesentium nisi incidunt voluptas
         obcaecati qui.
-      </p>
+      </p> */}
     </section>
   );
 }
