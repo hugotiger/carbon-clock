@@ -4,7 +4,7 @@ import * as React from "react";
 // Also build an accordion
 export default function AboutSection() {
   return (
-    <>
+    <section id="faq">
       <h2 id="about">About Carbon Clock</h2>
       <p>
         Estimation of how... Lorem ipsum dolor sit amet consectetur adipisicing
@@ -22,6 +22,12 @@ export default function AboutSection() {
       <h3>Is it trustworthy?</h3>
       <h3>Who is behind the website?</h3>
       <h3>What can we do to reduce emissions?</h3>
-    </>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti
+        excepturi ad dolorum sunt. Ratione perspiciatis rerum rem sint ipsum,
+        iusto provident, natus animi nostrum praesentium nisi incidunt voluptas
+        obcaecati qui.
+      </p>
+    </section>
   );
 }

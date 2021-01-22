@@ -2,6 +2,7 @@ import * as React from "react";
 import { Header, Container, AboutSection } from "./components";
 import { Clock } from "./views";
 import GlobalStyle from "./GlobalStyle";
+import { Footer } from "./components/Footer";
 
 // TODO: Find the logo I made
 
@@ -11,8 +12,9 @@ function App() {
       <GlobalStyle />
       <Header />
       <Clock />
-      <Container as="section" id="faq">
+      <Container>
         <AboutSection />
+        <Footer />
       </Container>
     </>
   );
