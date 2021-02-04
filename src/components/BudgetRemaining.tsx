@@ -7,14 +7,14 @@ interface Props {
   value: number;
 }
 
+const label = (
+  <>
+    CO<sub>2</sub> budget left (tons)
+  </>
+);
+
 const BudgetRemaining: React.FC<Props> = (props) => {
   const { value } = props;
-
-  const label = (
-    <>
-      CO<sub>2</sub> budget left (tons)
-    </>
-  );
 
   return (
     <Countdown label={label}>

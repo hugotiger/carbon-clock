@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { animate } from "framer-motion";
 import { usePrevious } from "../hooks";
 
+type formatFn = (val: number) => string;
+
 interface CounterProps {
   value: number;
-  formatValue?: (val: number) => string;
+  formatValue?: formatFn;
   duration?: number;
   renderInterval?: number;
   as?: keyof JSX.IntrinsicElements;

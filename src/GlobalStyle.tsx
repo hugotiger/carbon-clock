@@ -35,6 +35,11 @@ const GlobalStyle = createGlobalStyle`
         }
     }
 
+    h1 {
+        font-size: 2rem;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
     h2 {
         font-size: 2rem;
         margin-top: 0;
@@ -81,9 +86,10 @@ const GlobalStyle = createGlobalStyle`
 
     .grid {
         display: grid;
-        grid-template-columns: 1ch repeat(5, 2ch); /* Year is always 1ch wide*/
+        grid-template-columns: repeat(6, 2ch); 
         gap: 2rem 3rem;
         place-items: center;
+
     }
 
     @media only screen and (max-width: 768px) {
@@ -93,8 +99,22 @@ const GlobalStyle = createGlobalStyle`
         .budget-value {
             font-size: 2rem;
         }
+        .time__value {
+            font-size: 2.5rem;
+        }
+        .time-label {
+            font-size: 0.875rem;
+        }
     }
+
     @media only screen and (max-width: 360px) {
+        .label {
+            font-size: 1.125rem !important; // FIXME: This is a no-op
+        }
+        .budget-value {
+            letter-spacing: 1px;
+            font-size: 1.875rem;
+        }
         .time__value {
             font-size: 2rem;
         }

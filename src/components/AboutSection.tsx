@@ -5,7 +5,7 @@ import * as React from "react";
 export default function AboutSection() {
   return (
     <section id="faq">
-      <h2 id="about">About Carbon Clock</h2>
+      <h1 id="about">About Carbon Clock</h1>
       <p>
         Carbon Clock is an estimation of how much CO<sub>2</sub> can be released
         into the atmosphere to limit global warming to a maximum of 1.5°C.
@@ -28,8 +28,8 @@ export default function AboutSection() {
         >
           here
         </a>
-        . It's written in TypeScript, but shouldn't be too hard to understand
-        even with no prior programming knowlede.
+        . It's written in TypeScript, but shouldn't be too hard to grasp even
+        with no prior programming knowlede.
         {/* TODO: Länk till min github för uträkning */}
       </p>
       {/* <h3>Is it trustworthy?</h3>
