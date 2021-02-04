@@ -12,7 +12,7 @@ export const Main = styled(motion.main)`
   font-feature-settings: "tnum";
   line-height: 1;
 
-  background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=3304&q=80");
+  background-image: url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=2560&q=80");
   background-size: cover;
   background-position: center center;
 
