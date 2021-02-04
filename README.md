@@ -15,3 +15,5 @@ The full calculation can be seen in `calc.ts`. Short summary is that it's an int
 - [ ] Add 2.0 scenario
 - [ ] Improve accessibility
 - [ ] Spinning numbers animation
+- [ ] Add parallax effect on scroll
+- [ ] Reduce load time on slow connections
