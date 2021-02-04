@@ -10,3 +10,8 @@ The full calculation can be seen in `calc.ts`. Short summary is that it's an int
 ## Sources
 [IPCC Special Report on Global Warming of 1.5°C](https://www.ipcc.ch/sr15/)  
 [NASA Imagery](https://unsplash.com/photos/Q1p7bh3SHj8)
+
+## Milestones
+- [ ] Add 2.0 scenario
+- [ ] Improve accessibility
+- [ ] Spinning numbers animation
