@@ -15,6 +15,7 @@ const TabsContainer = styled.div`
 export default function Clock() {
   const { remainingTime, remainingBudget } = useCountdown(500);
   const [active, setActive] = useState("carbon");
+
   return (
     <Main
       role="main"

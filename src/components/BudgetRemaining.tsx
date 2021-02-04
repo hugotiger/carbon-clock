@@ -22,6 +22,7 @@ const BudgetRemaining: React.FC<Props> = (props) => {
         value={value}
         formatValue={formatNumberValue}
         className="budget-value"
+        fps={24}
       />
     </Countdown>
   );

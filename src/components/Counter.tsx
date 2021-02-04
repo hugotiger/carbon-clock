@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { animate } from "framer-motion";
-import { usePrevious } from "../hooks";
+import { usePrevious, useThrottle } from "../hooks";
 
 type formatFn = (val: number) => string;
 
@@ -26,7 +26,7 @@ const Counter: React.FC<Props> = (props) => {
     value = 0,
     formatValue = (val: number) => val.toString(),
     duration = 0.5,
-    renderInterval = 100,
+    fps = 30,
     as = "span",
     ...restProps
   } = props;
@@ -34,8 +34,7 @@ const Counter: React.FC<Props> = (props) => {
   const [currentVal, setCurrentVal] = useState(value);
   const prevVal = usePrevious(currentVal);
 
-  const [displayValue, setDisplayValue] = useState(currentVal);
-  const [updateCount, setUpdateCount] = useState(0);
+  const throttledValue = useThrottle(currentVal, fps);
 
   useEffect(() => {
     const startValue = prevVal ?? value;
@@ -53,22 +52,7 @@ const Counter: React.FC<Props> = (props) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value]);
 
-  useEffect(() => {
-    const interval = setInterval(
-      () => setUpdateCount((prev) => prev + 1),
-      renderInterval
-    );
-
-    return () => clearInterval(interval);
-  }, [renderInterval]);
-
-  useEffect(() => {
-    setDisplayValue(currentVal);
-    // `currentVal` is intentionally left out to reduce number of renders
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [updateCount]);
-
-  return React.createElement(as, { ...restProps }, formatValue(displayValue));
+  return React.createElement(as, { ...restProps }, formatValue(throttledValue));
 };
 
 export default Counter;
